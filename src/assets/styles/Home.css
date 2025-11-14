@@ -186,14 +186,19 @@
   }
 }
 /* Contact Banner */
+/* CONTACT BANNER -------------------------------------------------- */
+
 .contact-banner {
- background: linear-gradient(90deg, #ffffff 0%, #f2f5f7 100%);
-
-
-  color: #fff;
+  background: linear-gradient(90deg, #e8eef3 0%, #ffffff 100%);
+  padding: 30px;
+  color: #003b88;       /* Text now visible on light bg */
   border-radius: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-banner:hover {
@@ -201,28 +206,76 @@
   box-shadow: 0 6px 18px rgba(0, 40, 120, 0.25);
 }
 
-/* Text styling */
+/* TEXT SECTION -------------------------------------------------- */
+
 .contact-title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .contact-text {
   font-size: 1rem;
-  opacity: 0.9;
+  opacity: 0.85;
+  margin-top: 5px;
 }
 
-/* Button */
+/* BUTTON -------------------------------------------------- */
+
 .contact-btn {
-  background: #ffffff;
-  color: #003b88;
+  background: #003b88;
+  color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 22px;
   font-weight: 600;
   border-radius: 8px;
   transition: 0.3s ease;
 }
 
 .contact-btn:hover {
-  background: #eaf4ff;
+  background: #002d6d;
 }
+
+/* --------------------------------------------------
+   RESPONSIVE (TABLET)
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .contact-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .contact-title {
+    font-size: 1.4rem;
+  }
+
+  .contact-text {
+    font-size: 0.95rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+/* --------------------------------------------------
+   RESPONSIVE (MOBILE)
+-------------------------------------------------- */
+
+@media (max-width: 480px) {
+  .contact-banner {
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-text {
+    font-size: 0.9rem;
+  }
+}
+
