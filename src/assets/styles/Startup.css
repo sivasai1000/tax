@@ -1,0 +1,184 @@
+/* =====================================================
+   HERO HEADER SECTION
+===================================================== */
+.fu-startup-hero {
+  background: url("../images/taxbg.jpg") center/cover no-repeat;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: left;
+  color: #0f172a;
+  position: relative;
+}
+
+.fu-startup-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  z-index: 0;
+}
+
+/* Hero Title */
+.fu-startup-hero-title {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+/* Breadcrumb Wrapper */
+.fu-startup-breadcrumb {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+}
+
+.fu-startup-breadcrumb .breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+/* Breadcrumb Separator */
+.fu-startup-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: #ff3b3f;
+  margin: 0 6px;
+}
+
+/* Breadcrumb Links */
+.fu-startup-breadcrumb-link {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.fu-startup-breadcrumb-link:hover {
+  color: #ff3b3f;
+}
+
+/* Active Breadcrumb */
+.fu-startup-breadcrumb-active {
+  color: #ff3b3f;
+  font-weight: 600;
+}
+
+/* =====================================================
+   CONTENT SECTION
+===================================================== */
+.fu-startup-section {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.fu-startup-img {
+  border-radius: 16px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.fu-startup-img:hover {
+  transform: scale(1.05);
+}
+
+/* Headings & Descriptions */
+.fu-startup-heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.fu-startup-desc {
+  color: #475569;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-top: 10px;
+}
+
+/* List */
+.fu-startup-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 22px;
+}
+
+.fu-startup-list li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #1f2937;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Button */
+.fu-startup-btn {
+  background: linear-gradient(90deg, #ff3b3f, #ff6f61);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.fu-startup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 99, 99, 0.4);
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+===================================================== */
+
+/* Tablets & Medium Screens */
+@media (max-width: 992px) {
+  .fu-startup-hero {
+    min-height: 250px;
+    padding: 30px 20px;
+  }
+
+  .fu-startup-hero-title {
+    font-size: 2.3rem;
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .fu-startup-hero-title {
+    font-size: 2rem;
+  }
+
+  .fu-startup-section {
+    padding: 40px 0;
+  }
+
+  .fu-startup-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .fu-startup-hero {
+    min-height: 200px;
+    text-align: center;
+  }
+
+  .fu-startup-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .fu-startup-desc {
+    font-size: 0.95rem;
+  }
+}

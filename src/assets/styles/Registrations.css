@@ -1,0 +1,164 @@
+/* ================================================
+   HERO SECTION
+================================================ */
+.fu-registration-hero {
+  background: url("../images/taxbg.jpg") center/cover no-repeat;
+  position: relative;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* Blur + Dark Overlay */
+.fu-registration-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Ensure content is above overlay */
+.fu-registration-hero * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.fu-registration-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ================================================
+   BREADCRUMB
+================================================ */
+.fu-registration-breadcrumb {
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.fu-registration-link {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fu-registration-link:hover {
+  color: #ffb703;
+}
+
+.fu-registration-active {
+  color: #ffb703 !important;
+}
+
+/* ================================================
+   CONTENT SECTION
+================================================ */
+.fu-registration-heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0b2545;
+  margin-bottom: 1rem;
+}
+
+.fu-registration-desc {
+  color: #495057;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.fu-registration-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.3rem;
+}
+
+.fu-registration-list li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  color: #212529;
+}
+
+/* Button */
+.fu-registration-btn {
+  background: linear-gradient(90deg, #e63946, #f77f00);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.fu-registration-btn:hover {
+  background: linear-gradient(90deg, #f77f00, #e63946);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(231, 57, 70, 0.4);
+}
+
+/* Image */
+.fu-registration-img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.fu-registration-img:hover {
+  transform: scale(1.05);
+}
+
+/* ================================================
+   RESPONSIVENESS
+================================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .fu-registration-hero {
+    height: 220px;
+    padding: 0 15px;
+  }
+
+  .fu-registration-title {
+    font-size: 2rem;
+  }
+
+  .fu-registration-heading {
+    font-size: 1.6rem;
+  }
+
+  .fu-registration-img {
+    max-width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .fu-registration-hero {
+    height: 200px;
+  }
+
+  .fu-registration-title {
+    font-size: 1.7rem;
+  }
+
+  .fu-registration-desc,
+  .fu-registration-list li {
+    font-size: 0.95rem;
+  }
+
+  .fu-registration-btn {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 40px;
+  }
+}

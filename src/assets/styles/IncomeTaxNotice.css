@@ -1,0 +1,160 @@
+/* ====================================
+   BASE SECTION
+==================================== */
+.fu-notice-section {
+  color: #0f172a;
+  padding-bottom: 40px;
+}
+
+/* ====================================
+   HERO / HEADER
+==================================== */
+.fu-notice-hero {
+  background: url("../images/taxbg.jpg") center/cover no-repeat;
+  padding: 100px 0 60px;
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.fu-notice-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 41, 59, 0.55); /* dark overlay */
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+/* Layered content */
+.fu-notice-title,
+.fu-notice-breadcrumb {
+  position: relative;
+  z-index: 2;
+}
+
+.fu-notice-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* ====================================
+   BREADCRUMB
+==================================== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  font-weight: 500;
+}
+
+.breadcrumb-separator {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* Links */
+.fu-notice-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fu-notice-link:hover {
+  color: #f87171; /* red accent */
+}
+
+.fu-notice-active {
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* ====================================
+   CONTENT SECTION
+==================================== */
+.fu-notice-heading {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+.fu-notice-desc {
+  color: #334155;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+/* List */
+.fu-notice-list {
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.fu-notice-list li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+/* Button */
+.fu-notice-btn {
+  background: #e63946;
+  color: #ffffff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.fu-notice-btn:hover {
+  background: #b91c1c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* Image */
+.fu-notice-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+@media (max-width: 992px) {
+  .fu-notice-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fu-notice-hero {
+    padding: 80px 0 50px;
+  }
+
+  .fu-notice-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fu-notice-title {
+    font-size: 1.6rem;
+  }
+
+  .fu-notice-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

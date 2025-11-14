@@ -1,0 +1,157 @@
+/* ================================================
+   HERO SECTION
+================================================ */
+.fu-service-hero {
+  background: url("../images/taxbg.jpg") center/cover no-repeat;
+  position: relative;
+  height: 300px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* Overlay + Blur */
+.fu-service-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+/* Ensure Content is Above Overlay */
+.fu-service-hero-title,
+.fu-service-breadcrumb {
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.fu-service-hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================================
+   BREADCRUMB
+================================================ */
+.fu-service-breadcrumb {
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+.fu-service-breadcrumb .fu-service-link {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.fu-service-breadcrumb .fu-service-link:hover {
+  color: #ffb703;
+}
+
+.fu-service-active {
+  color: #ffb703;
+  font-weight: 600;
+}
+
+/* ================================================
+   CARDS
+================================================ */
+.fu-service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  padding: 1.8rem;
+  height: 100%;
+}
+
+.fu-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.fu-service-icon {
+  font-size: 40px;
+  color: #e63946;
+  margin-bottom: 12px;
+}
+
+/* Service List Stylish Design */
+.fu-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fu-service-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Hover Animation */
+.fu-service-list li:hover {
+  color: #e63946;
+  transform: translateX(6px);
+}
+
+.fu-service-list li:hover::before {
+  transform: scale(1.3);
+}
+
+
+/* ================================================
+   RESPONSIVE STYLES
+================================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .fu-service-hero {
+    height: 230px;
+  }
+
+  .fu-service-hero-title {
+    font-size: 2rem;
+  }
+
+  .fu-service-card {
+    padding: 1.4rem;
+    text-align: center;
+  }
+
+  .fu-service-icon {
+    margin-bottom: 10px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .fu-service-hero {
+    height: 200px;
+    padding: 0 15px;
+  }
+
+  .fu-service-hero-title {
+    font-size: 1.7rem;
+  }
+
+  .fu-service-list {
+    font-size: 0.9rem;
+  }
+}

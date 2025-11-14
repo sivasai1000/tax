@@ -1,0 +1,47 @@
+/* ============================
+   DESKTOP / WEB (NO MARQUEE)
+============================ */
+.header-top {
+  background: linear-gradient(90deg, #0d1b2a 60%, #1b263b 100%);
+  color: #fff;
+  padding: 8px 20px;
+}
+
+/* This ensures contact LEFT & social icons RIGHT on web */
+.header-marquee-content {
+  display: flex;
+  justify-content: space-between;  /* 👈 KEY FIX */
+  align-items: center;
+  white-space: normal;
+}
+
+/* ============================
+   MOBILE (FULL MARQUEE)
+============================ */
+@media (max-width: 768px) {
+
+  .header-top {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  /* On mobile we REMOVE left/right and turn into scrolling row */
+  .header-marquee-content {
+    display: inline-flex;
+    gap: 40px;
+    align-items: center;
+    animation: headerScroll 15s linear infinite;
+    white-space: nowrap;
+    width: max-content; /* Fix smooth loop */
+  }
+
+  @keyframes headerScroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}

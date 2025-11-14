@@ -1,0 +1,128 @@
+/* ====================================
+   SECTION BASE
+==================================== */
+.fu-income-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  animation: fadeIn 0.8s ease-in-out;
+  color: #0f172a;
+  padding: 60px 20px;
+}
+
+/* ====================================
+   TITLES
+==================================== */
+.fu-income-subtitle {
+  color: #e63946;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.fu-income-title {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+/* ====================================
+   CARD STYLES
+==================================== */
+.fu-income-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: left;
+  height: 100%;
+}
+
+.fu-income-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ====================================
+   ICON
+==================================== */
+.fu-income-icon {
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 16px;
+}
+
+/* ====================================
+   CARD TEXT
+==================================== */
+.fu-income-card h4 {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.fu-income-card p {
+  color: #334155;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ====================================
+   CLICKABLE CLASS
+==================================== */
+.clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clickable:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ====================================
+   ANIMATION
+==================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+@media (max-width: 992px) {
+  .fu-income-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fu-income-title {
+    font-size: 1.7rem;
+  }
+  .fu-income-card {
+    text-align: center;
+    padding: 24px;
+  }
+  .fu-income-icon {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fu-income-title {
+    font-size: 1.5rem;
+  }
+  .fu-income-card p {
+    font-size: 0.9rem;
+  }
+}

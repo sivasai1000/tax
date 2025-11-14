@@ -1,0 +1,135 @@
+/* ================================
+   FilingUp Footer Styles
+   (Isolated Namespace)
+=================================== */
+.fu-footer {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  padding: 25px 20px;
+  margin-top: auto; /* pushes footer to bottom */
+}
+
+/* Footer Inner Wrapper */
+.fu-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fu-footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.fu-footer h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #e63946;
+}
+
+.fu-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.fu-footer a:hover {
+  opacity: 1;
+  color: #e63946;
+}
+
+/* Icons row */
+.fu-footer-social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.fu-footer-social i {
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.fu-footer-social i:hover {
+  color: #e63946;
+}
+
+/* Copyright */
+.fu-footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* ================================
+   Layout to keep footer at bottom
+=================================== */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root > .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* footer already using margin-top:auto */
+.fu-footer {
+  margin-top: auto;
+}
+
+/* ================================
+   Responsive Footer
+=================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .fu-footer-content {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .fu-footer-column {
+    min-width: 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .fu-footer {
+    padding: 20px 15px;
+  }
+
+  .fu-footer-column {
+    min-width: 100%;
+  }
+
+  .fu-footer h4 {
+    font-size: 15px;
+  }
+
+  .fu-footer-bottom {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,157 @@
+/* ======================================
+   GST HERO SECTION
+====================================== */
+.fu-gst-hero {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* === Blurred background === */
+.fu-gst-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/taxbg.jpg") center/cover no-repeat;
+  filter: blur(12px);
+  transform: scale(1.07);
+  z-index: 0;
+}
+
+/* === Dark overlay === */
+.fu-gst-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* === Hero Title === */
+.fu-gst-hero-title {
+  position: relative;
+  z-index: 2;
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ======================================
+   BREADCRUMB
+====================================== */
+.fu-gst-breadcrumb {
+  position: relative;
+  z-index: 2;
+  margin-top: 12px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.breadcrumb-separator {
+  color: #f8fafc;
+}
+
+.fu-gst-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.fu-gst-link:hover {
+  color: #f87171;
+}
+
+.fu-gst-active {
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* ======================================
+   CONTENT BELOW HERO
+====================================== */
+.fu-gst-img {
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.fu-gst-heading {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.8rem;
+}
+
+.fu-gst-desc {
+  color: #475569;
+  margin-top: 1rem;
+}
+
+.fu-gst-list {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
+  color: #1f2937;
+}
+
+/* ======================================
+   RESPONSIVE BREAKPOINTS
+====================================== */
+
+/* === Tablets (≤ 992px) === */
+@media (max-width: 992px) {
+  .fu-gst-hero {
+    height: 260px;
+  }
+  .fu-gst-hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* === Mobiles (≤ 768px) === */
+@media (max-width: 768px) {
+  .fu-gst-hero {
+    height: 240px;
+    padding: 0 15px;
+  }
+
+  .fu-gst-hero-title {
+    font-size: 2rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+  }
+
+  .fu-gst-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* === Small Mobile (≤ 480px) === */
+@media (max-width: 480px) {
+  .fu-gst-hero {
+    height: 210px;
+  }
+
+  .fu-gst-hero-title {
+    font-size: 1.7rem;
+  }
+
+  .breadcrumb {
+    gap: 4px;
+    font-size: 0.85rem;
+  }
+}

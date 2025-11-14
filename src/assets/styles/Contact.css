@@ -1,0 +1,204 @@
+/* ================================
+   CONTACT SECTION WRAPPER
+================================ */
+.fu-contact-wrapper {
+  background: #ffffff;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
+/* Subtitle */
+.fu-contact-subtitle {
+  color: #e63946;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Main Title */
+.fu-contact-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1b263b;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.fu-contact-desc {
+  color: #444;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ================================
+   CONTACT ITEMS (LEFT SIDE)
+================================ */
+.fu-contact-item {
+  display: flex;
+  align-items: flex-start; /* FIXED */
+}
+
+
+
+.fu-contact-icon {
+  width: 50px;
+  height: 50px;   /* ADD THIS */
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  background: #e63946;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.fu-contact-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+.fu-contact-label {
+  margin: 0;
+  font-weight: 600;
+  font-size: 17px;
+  color: #1b263b;
+}
+
+.fu-contact-text {
+  margin: 5px 0 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================================
+   RIGHT SIDE FORM CARD
+================================ */
+.fu-contact-form-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease;
+}
+
+.fu-contact-form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fu-form-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1b263b;
+}
+
+/* ================================
+   INPUT FIELDS
+================================ */
+.fu-input,
+.fu-textarea {
+  border-radius: 8px !important;
+  border: 1px solid #ccc !important;
+  padding: 12px 14px;
+  font-size: 15px;
+  transition: all 0.3s ease !important;
+  background: #fff;
+}
+
+.fu-input:focus,
+.fu-textarea:focus {
+  border-color: #e63946 !important;
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.4);
+}
+
+/* Textarea */
+.fu-textarea {
+  resize: none;
+}
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+.fu-submit-btn {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fu-submit-btn:hover {
+  background-color: #d62839;
+  transform: scale(1.05);
+}
+
+/* ================================
+   ANIMATION
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .fu-contact-title {
+    font-size: 2rem;
+  }
+
+  .fu-contact-desc {
+    font-size: 15px;
+  }
+
+  .fu-contact-form-card {
+    padding: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .fu-contact-title {
+    font-size: 1.8rem;
+  }
+
+  .fu-contact-form-card {
+    padding: 20px;
+  }
+
+  .fu-submit-btn {
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .fu-contact-title {
+    font-size: 1.6rem;
+  }
+
+  .fu-input,
+  .fu-textarea {
+    font-size: 14px !important;
+    padding: 10px 12px !important;
+  }
+
+  .fu-submit-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}

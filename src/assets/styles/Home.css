@@ -1,0 +1,100 @@
+/* ====================================
+   HOME CONTAINER
+==================================== */
+.home-container {
+  background: linear-gradient(180deg, #f9fbfd 0%, #eaf4ff 100%);
+  animation: fadeIn 1s ease-in;
+  padding: 60px 20px;
+}
+
+/* ====================================
+   TITLE + TEXT
+==================================== */
+.home-container h1 {
+  color: #1b263b;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-container p {
+  color: #415a77;
+  font-size: 1.1rem;
+  margin-top: 12px;
+}
+
+/* ====================================
+   IMAGE
+==================================== */
+.home-img {
+  width: 60%;
+  max-width: 500px; /* ensures nice limit on large screens */
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.home-img:hover {
+  transform: scale(1.05);
+}
+
+/* ====================================
+   Animation
+==================================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====================================
+   RESPONSIVE BREAKPOINTS
+==================================== */
+
+/* ===== Tablets (≤ 992px) ===== */
+@media (max-width: 992px) {
+  .home-container {
+    padding: 50px 20px;
+  }
+
+  .home-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-img {
+    width: 70%;
+  }
+}
+
+/* ===== Mobile (≤ 768px) ===== */
+@media (max-width: 768px) {
+  .home-container {
+    text-align: center;
+    padding: 45px 15px;
+  }
+
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .home-container p {
+    font-size: 1rem;
+  }
+
+  .home-img {
+    width: 80%;
+  }
+}
+
+/* ===== Small Mobile (≤ 480px) ===== */
+@media (max-width: 480px) {
+  .home-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .home-container p {
+    font-size: 0.95rem;
+  }
+
+  .home-img {
+    width: 90%;
+  }
+}
