@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../assets/styles/Navbar.css";
+import logo from "../assets/images/taxlogo.svg"
 
 const Navbar = () => {
 
@@ -15,7 +16,7 @@ const Navbar = () => {
     <nav className="fu-navbar navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
       <div className="container">
         <NavLink className="navbar-brand fw-bold text-primary" to="/" onClick={closeNavbar}>
-          <img src="/logo.png" className="fu-nav-logo me-2" />
+          <img src={logo} className="fu-nav-logo me-2" width={45} height={45} />
           V4U Tax Solutions
         </NavLink>
 
