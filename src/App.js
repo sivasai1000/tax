@@ -11,7 +11,8 @@ import Startup from "./pages/Startup";
 import Contact from "./pages/Contact";
 import GSTRegistration from "./pages/GSTRegistration";
 import OtherService from "./pages/Services";
-import Registrations from "./pages/Registrations"
+import Registrations from "./pages/Registrations";
+import ScrollToTop from "./ScrollToTop";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,11 +21,13 @@ import "./App.css";
 function App() {
   return (
     <Router>
+      <ScrollToTop /> 
       <div className="fu-app d-flex flex-column min-vh-100">
         <Header />
         <Navbar />
         <main className="fu-main flex-grow-1">
           <Routes>
+            
             <Route path="/" element={<Home />} />
             <Route path="/gst" element={<GST />} />
             <Route path="/incometax" element={<IncomeTax />} />

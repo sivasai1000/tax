@@ -27,8 +27,8 @@ const Contact = () => {
               <div className="ms-3">
                 <h5 className="fu-contact-label">Visit Us:</h5>
                 <p className="fu-contact-text">
-                  Sree Sai Arcade -2, Office No. 17, Next to HDFC Bank, 
-                  Sri Sathya Sai District, Andhra Pradesh, Puttaparthi - 515134
+                  FLAT No. 101, SVSS RESIDENCY, AMEENPUR MUNICIPALITY, PATANCHERU MANDAL, SANGAREDDT DISTRICT
+
                 </p>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Contact = () => {
               </div>
               <div className="ms-3">
                 <h5 className="fu-contact-label">Mail Us:</h5>
-                <p className="fu-contact-text">support@yourmail.com</p>
+                <p className="fu-contact-text">v4utaxsolutions@yahoo.com</p>
               </div>
             </div>
           </div>
